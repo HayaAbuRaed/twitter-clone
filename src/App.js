@@ -1,9 +1,8 @@
 import "./App.css";
+import AppRoutes from "./Routes/AppRoutes";
 
-function App() {
-  console.log(process.env.REACT_APP_RapidAPI_Key);
-
-  return <div className="App"></div>;
-}
+const App = () => {
+  return <AppRoutes />;
+};
 
 export default App;
