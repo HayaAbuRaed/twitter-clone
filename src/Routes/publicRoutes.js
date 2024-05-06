@@ -1,8 +1,9 @@
 import { lazy } from "react";
 import { Outlet } from "react-router-dom";
 
-const Home = lazy(() => import("../pages/Home/Home.jsx"));
 const Layout = lazy(() => import("../containers/Layout/index.jsx"));
+const Home = lazy(() => import("../pages/Home/Home.jsx"));
+const Profile = lazy(() => import("../pages/Profile"));
 
 const publicRoutes = {
   path: "/",
@@ -15,6 +16,10 @@ const publicRoutes = {
           path: "",
           element: <Home />,
           index: true,
+        },
+        {
+          path: "/:username",
+          element: <Profile />,
         },
       ],
     },
