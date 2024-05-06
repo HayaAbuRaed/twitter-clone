@@ -35,7 +35,7 @@ const Layout = () => {
             item
             xs={12}
             lg={7}
-            width={{ xs: "auto", sm: "37.5rem" }}
+            maxWidth={{ sm: "600px" }}
             sx={{ borderInline: "1px rgb(47, 51, 54) solid" }}
           >
             <Outlet />

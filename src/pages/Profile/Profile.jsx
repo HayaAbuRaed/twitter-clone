@@ -1,21 +1,35 @@
 import { Box } from "@mui/material";
 import { useParams } from "react-router-dom";
+import ActivitySection from "./components/ActivitySection/ActivitySection";
 import Header from "./components/Header";
 import InfoSection from "./components/InfoSection/InfoSection";
-import ActivitySection from "./components/ActivitySection/ActivitySection";
+import useGetProfile from "./hooks/useGetProfile";
 
 const Profile = () => {
-  // get the param value:
   const { username } = useParams();
+
+  const { profile, isFetching } = useGetProfile(username);
+
+  if (isFetching) return <Box>Loading...</Box>;
+
+  const {
+    data: {
+      user: {
+        result: { legacy },
+      },
+    },
+  } = profile;
+
+  const { name, statuses_count } = legacy;
+
+  console.log("name", name);
 
   return (
     <Box>
-      Welcome to {username} profile
-      
-      <Header />
+      <Header name={name} postsCount={statuses_count} />
 
       <InfoSection />
-      
+
       <ActivitySection />
     </Box>
   );
