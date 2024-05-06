@@ -24,6 +24,8 @@ export const Drawer = styled(Stack, {
     fontSize: "1.28rem",
   },
 
+  alignItems: open ? "flex-start" : "center",
+
   ...(open && {
     ...openedMixin(theme),
   }),

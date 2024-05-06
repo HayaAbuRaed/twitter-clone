@@ -50,3 +50,5 @@ const LEFT_LEST = [
 ];
 
 export default LEFT_LEST;
+
+export const LEFT_BREAKPOINT = "(max-width:1280px)";

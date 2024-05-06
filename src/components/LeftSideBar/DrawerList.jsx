@@ -4,10 +4,13 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  useMediaQuery,
 } from "@mui/material";
-import LEFT_LEST from "./constants";
+import LEFT_LEST, { LEFT_BREAKPOINT } from "./constants";
 
 const DrawerList = () => {
+  const isExpanded = !useMediaQuery(LEFT_BREAKPOINT);
+
   return (
     <List
       disablePadding
@@ -41,7 +44,9 @@ const DrawerList = () => {
                 {item.icon}
               </ListItemIcon>
 
-              <ListItemText primary={item.text} sx={{ m: 0, pb: 0.4 }} />
+              {isExpanded && (
+                <ListItemText primary={item.text} sx={{ m: 0, pb: 0.4 }} />
+              )}
             </ListItemButton>
           </ListItem>
         ))}

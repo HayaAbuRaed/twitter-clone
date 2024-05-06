@@ -11,6 +11,7 @@ const {
   communities,
   profile,
   more,
+  post,
 } = pathDs;
 
 export const HomeIcon = () => <CustomIcon pathFactor={home} />;
@@ -32,3 +33,5 @@ export const CommunitiesIcon = () => <CustomIcon pathFactor={communities} />;
 export const ProfileIcon = () => <CustomIcon pathFactor={profile} />;
 
 export const MoreIcon = () => <CustomIcon pathFactor={more} />;
+
+export const PostIcon = () => <CustomIcon pathFactor={post} />;
