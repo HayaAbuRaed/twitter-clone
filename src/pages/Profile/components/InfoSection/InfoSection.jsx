@@ -2,7 +2,7 @@ import { Link, Stack, Typography, styled } from "@mui/material";
 import React from "react";
 import { CalenderIcon, LinkIcon, LocationIcon } from "../customIcons";
 import Banner from "./Banner";
-import { formatNumber } from "../../utils";
+import { formatNumber } from "../../../../utils";
 import ProfileName from "../../../../components/ProfileName";
 
 const ContainerTypography = styled(Typography)(() => ({

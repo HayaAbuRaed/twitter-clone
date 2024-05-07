@@ -2,6 +2,7 @@ import { Grid, Stack } from "@mui/material";
 import React from "react";
 import { Outlet } from "react-router-dom";
 import LeftSideBar from "../../components/LeftSideBar";
+import RightSideBar from "../../components/RightSideBar";
 
 const LayoutGridStyle = {
   height: "100vh",
@@ -40,7 +41,9 @@ const Layout = () => {
           >
             <Outlet />
           </Grid>
-          <Grid item xs={0} lg={4.6}></Grid>
+          <Grid item xs={0} lg={4.6} display={{ xs: "none", lg: "flex" }}>
+            <RightSideBar />
+          </Grid>
         </Grid>
       </Grid>
     </Stack>
