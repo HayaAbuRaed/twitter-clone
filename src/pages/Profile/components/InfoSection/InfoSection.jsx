@@ -40,13 +40,11 @@ const InfoSection = ({ data }) => {
   });
 
   return (
-    <Stack>
-      <Stack>
-        <Banner
-          coverPic={profile_banner_url}
-          profilePic={profile_image_url_https}
-        />
-      </Stack>
+    <Stack pb={2}>
+      <Banner
+        coverPic={profile_banner_url}
+        profilePic={profile_image_url_https}
+      />
 
       <Stack px={2} gap={1.5}>
         <Stack>

@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 // import { useParams } from "react-router-dom";
-import ActivitySection from "./components/ActivitySection/ActivitySection";
+import ActivitySection from "./components/ActivitySection";
 import Header from "./components/Header";
 import InfoSection from "./components/InfoSection/InfoSection";
 // import useGetProfile from "./hooks/useGetProfile";
