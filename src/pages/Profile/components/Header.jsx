@@ -5,10 +5,11 @@ import ProfileName from "../../../components/ProfileName";
 const Header = ({ name, postsCount, isVerified }) => {
   return (
     <Stack
-      px={2}
+      pr={2}
+      pl={1}
       flexDirection="row"
       alignItems="center"
-      gap={2}
+      gap={2.5}
       sx={{ backgroundColor: "rgba(0, 0, 0, 0.65)" }}
       minHeight={53}
     >
