@@ -65,7 +65,7 @@ const TrendsContainer = ({ step = 10 }) => {
   return (
     <Stack
       minWidth="348.4px"
-      borderRadius={2}
+      borderRadius={5}
       border="1px rgb(47, 51, 54) solid"
       gap={2}
     >
