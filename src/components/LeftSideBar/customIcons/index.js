@@ -1,4 +1,4 @@
-import CustomIcon from "./CustomIcon";
+import CustomIcon from "../../CustomIcon/CustomIcon";
 import pathDs from "./pathDs";
 
 const {

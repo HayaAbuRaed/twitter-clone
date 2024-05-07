@@ -1,13 +1,14 @@
-import { Button, IconButton, Stack, Typography } from "@mui/material";
+import { IconButton, Stack, Typography } from "@mui/material";
 import BackIcon from "@mui/icons-material/KeyboardBackspaceOutlined";
+import ProfileName from "../../../components/ProfileName";
 
-const Header = ({ name, postsCount }) => {
+const Header = ({ name, postsCount, isVerified }) => {
   return (
     <Stack
       px={2}
       flexDirection="row"
       alignItems="center"
-      gap={1}
+      gap={2}
       sx={{ backgroundColor: "rgba(0, 0, 0, 0.65)" }}
       minHeight={53}
     >
@@ -25,35 +26,15 @@ const Header = ({ name, postsCount }) => {
 
       {/* Profile Name and #Posts*/}
       <Stack justifyContent="center">
-        <Typography fontSize="1.25rem" variant="h3">
-          {name}
-        </Typography>
+        <ProfileName name={name} isVerified={isVerified} />
+
         <Typography fontSize="0.75rem" color="GrayText">
-          {postsCount} posts
+          {postsCount.toLocaleString()} posts
         </Typography>
       </Stack>
 
-      {/* Follow Button */}
-      <Button
-        variant="contained"
-        sx={{
-          ml: "auto",
-          height: "fit-content",
-          textTransform: "none",
-          fontWeight: 600,
-          borderRadius: 10,
-          px: 2.5,
-          backgroundColor: "#eff3f4",
-          color: "var(--font-default-black-color)",
-          boxShadow: "none",
-          "&:hover": {
-            backgroundColor: "rgb(215, 219, 220)",
-            boxShadow: "none",
-          },
-        }}
-      >
-        Follow
-      </Button>
+      {/* TODO: Fix to appear when the info section's disappear */}
+      {/* <FollowButton /> */}
     </Stack>
   );
 };
