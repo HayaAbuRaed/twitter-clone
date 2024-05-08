@@ -2,7 +2,7 @@ import { Link, Stack, Typography, styled } from "@mui/material";
 import React from "react";
 import { CalenderIcon, LinkIcon, LocationIcon } from "../customIcons";
 import Banner from "./Banner";
-import { formatNumber } from "../../utils";
+import { formatNumber } from "../../../../utils";
 import ProfileName from "../../../../components/ProfileName";
 
 const ContainerTypography = styled(Typography)(() => ({
@@ -25,14 +25,18 @@ const InfoSection = ({ data }) => {
     screen_name,
     description,
     location,
-    url,
     created_at,
     followers_count,
     friends_count,
     profile_banner_url,
     profile_image_url_https,
     is_blue_verified: isVerified,
+    entities: {
+      url: { urls },
+    },
   } = data;
+
+  const { expanded_url, display_url } = urls[0];
 
   const joinedDate = new Date(created_at).toLocaleString("default", {
     month: "long",
@@ -63,9 +67,9 @@ const InfoSection = ({ data }) => {
             </ContainerTypography>
           )}
 
-          {url && (
+          {expanded_url && (
             <Link
-              href={url}
+              href={expanded_url}
               target="_blank"
               display="flex"
               flexDirection="row"
@@ -76,7 +80,7 @@ const InfoSection = ({ data }) => {
               }}
             >
               <LinkIcon />
-              {url}
+              {display_url}
             </Link>
           )}
 

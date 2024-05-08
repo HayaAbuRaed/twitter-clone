@@ -4,7 +4,7 @@ export const formatNumber = (num) => {
   const suffixIndex = Math.floor(
     Math.max(0, Math.min(num.toString().length - 1, 12) / 3)
   );
-  
+
   const formattedNum = parseFloat(
     (num / Math.pow(1000, suffixIndex)).toFixed(1)
   );
