@@ -50,13 +50,35 @@ const TrendsContainer = ({ step = 10 }) => {
       promoted_content: null,
       tweet_volume: 10946,
     },
+    {
+      name: "#استمرار_السالم_مرفوض",
+      url: "http://twitter.com/search?q=%23getoutofrafah",
+      promoted_content: null,
+      tweet_volume: 10946,
+    },
+    {
+      name: "#استمرار_السالم_مرفوض",
+      url: "http://twitter.com/search?q=%23getoutofrafah",
+      promoted_content: null,
+      tweet_volume: 10946,
+    },
+    {
+      name: "#استمرار_السالم_مرفوض",
+      url: "http://twitter.com/search?q=%23getoutofrafah",
+      promoted_content: null,
+      tweet_volume: 10946,
+    },
+    {
+      name: "#استمرار_السالم_مرفوض",
+      url: "http://twitter.com/search?q=%23getoutofrafah",
+      promoted_content: null,
+      tweet_volume: 10946,
+    },
   ];
 
   const isFetching = false;
 
   if (!trends) return null;
-
-  // Get 10 of the trends and leave the rest for the "Show more" button
 
   const handleShowMore = () => {
     setVisibleItems((prevVisibleItems) => prevVisibleItems + step);
@@ -64,7 +86,8 @@ const TrendsContainer = ({ step = 10 }) => {
 
   return (
     <Stack
-      minWidth="348.4px"
+      width="100%"
+      maxWidth="348.4px"
       borderRadius={5}
       border="1px rgb(47, 51, 54) solid"
       gap={2}

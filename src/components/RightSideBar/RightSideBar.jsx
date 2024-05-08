@@ -5,7 +5,7 @@ import SearchBar from "./SearchBar/SearchBar";
 
 const RightSideBar = () => {
   return (
-    <Stack pt={0.6} gap={2}>
+    <Stack width="100%" pt={0.6} gap={2}>
       <SearchBar />
 
       <TrendsContainer />
