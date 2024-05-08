@@ -50,30 +50,6 @@ const TrendsContainer = ({ step = 10 }) => {
       promoted_content: null,
       tweet_volume: 10946,
     },
-    {
-      name: "#استمرار_السالم_مرفوض",
-      url: "http://twitter.com/search?q=%23getoutofrafah",
-      promoted_content: null,
-      tweet_volume: 10946,
-    },
-    {
-      name: "#استمرار_السالم_مرفوض",
-      url: "http://twitter.com/search?q=%23getoutofrafah",
-      promoted_content: null,
-      tweet_volume: 10946,
-    },
-    {
-      name: "#استمرار_السالم_مرفوض",
-      url: "http://twitter.com/search?q=%23getoutofrafah",
-      promoted_content: null,
-      tweet_volume: 10946,
-    },
-    {
-      name: "#استمرار_السالم_مرفوض",
-      url: "http://twitter.com/search?q=%23getoutofrafah",
-      promoted_content: null,
-      tweet_volume: 10946,
-    },
   ];
 
   const isFetching = false;
