@@ -2,6 +2,7 @@ import { Button, Stack, Typography } from "@mui/material";
 import { useState } from "react";
 import TrendChunk from "./TrendChunk";
 import useGetTrends from "./hooks/useGetTrends";
+import Loader from "../Loader";
 
 const TrendsContainer = ({ step = 10 }) => {
   const [visibleItems, setVisibleItems] = useState(step);
@@ -24,7 +25,7 @@ const TrendsContainer = ({ step = 10 }) => {
         Trends for you
       </Typography>
 
-      {isFetching && <Typography>Loading...</Typography>}
+      {isFetching && <Loader />}
 
       {!isFetching && (
         <Stack gap={3}>

@@ -1,15 +1,15 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import Loader from "../../../../components/Loader";
 import TweetsList from "../../../../components/TweetsList";
 import useGetProfileTweets from "../../hooks/useGetProfileTweets";
-import { Box } from "@mui/material";
 
 const PostsPanel = () => {
   const { username } = useParams();
 
   const { data, isFetching } = useGetProfileTweets(username);
 
-  if (isFetching) return <Box>Loading...</Box>;
+  if (isFetching) return <Loader />;
 
   if (!data) return null;
 

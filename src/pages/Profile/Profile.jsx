@@ -4,13 +4,14 @@ import ActivitySection from "./components/ActivitySection";
 import Header from "./components/Header";
 import InfoSection from "./components/InfoSection/InfoSection";
 import useGetProfile from "./hooks/useGetProfile";
+import Loader from "../../components/Loader";
 
 const Profile = () => {
   const { username } = useParams();
 
   const { profile, isFetching } = useGetProfile(username);
 
-  if (isFetching) return <Box>Loading...</Box>;
+  if (isFetching) return <Loader />;
 
   const {
     data: {
