@@ -1,58 +1,12 @@
 import { Button, Stack, Typography } from "@mui/material";
-import useGetTrends from "./hooks/useGetTrends";
-import TrendChunk from "./TrendChunk";
 import { useState } from "react";
+import TrendChunk from "./TrendChunk";
+import useGetTrends from "./hooks/useGetTrends";
 
 const TrendsContainer = ({ step = 10 }) => {
   const [visibleItems, setVisibleItems] = useState(step);
 
   const { trends, isFetching } = useGetTrends();
-
-  //   const trends = [
-  //     {
-  //       name: "#رفح_بين_الحصار_والتجويع",
-  //       url: "http://twitter.com/search?q=%23getoutofrafah",
-  //       promoted_content: null,
-  //       tweet_volume: null,
-  //     },
-  //     {
-  //       name: "#getoutofrafah",
-  //       url: "http://twitter.com/search?q=%23getoutofrafah",
-  //       promoted_content: null,
-  //       tweet_volume: 27273,
-  //     },
-  //     {
-  //       name: "#DCvsRR",
-  //       url: "http://twitter.com/search?q=%23DCvsRR",
-  //       promoted_content: null,
-  //       query: "%23DCvsRR",
-  //       tweet_volume: 15420,
-  //     },
-  //     {
-  //       name: "iPad Pro",
-  //       url: "http://twitter.com/search?q=%22iPad+Pro%22",
-  //       promoted_content: null,
-  //       query: "%22iPad+Pro%22",
-  //       tweet_volume: 54915,
-  //     },
-  //     {
-  //       name: "#AppleEvent",
-  //       url: "http://twitter.com/search?q=%23AppleEvent",
-  //       promoted_content: null,
-  //       query: "%23AppleEvent",
-  //       tweet_volume: 65129,
-  //     },
-  //     {
-  //       name: "#استمرار_السالم_مرفوض",
-  //       url: "http://twitter.com/search?q=%23getoutofrafah",
-  //       promoted_content: null,
-  //       tweet_volume: 10946,
-  //     },
-  //   ];
-
-  //   const isFetching = false;
-
-  if (!trends) return null;
 
   const handleShowMore = () => {
     setVisibleItems((prevVisibleItems) => prevVisibleItems + step);

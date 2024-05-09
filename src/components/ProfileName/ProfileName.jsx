@@ -2,19 +2,19 @@ import { Typography, Stack, Box } from "@mui/material";
 import CustomIcon from "../CustomIcon";
 import { VERIFIED_ICON_PATH } from "./constants";
 
-const ProfileName = ({ name, isVerified }) => {
+const ProfileName = ({ name, isVerified, size = "1.35rem" }) => {
   return (
-    <Stack flexDirection="row" alignItems="flex-end" gap={0.25}>
-      <Typography variant="h3" fontSize="1.35rem" fontWeight={700}>
+    <Stack flexDirection="row" alignItems="center" gap={0.25}>
+      <Typography variant="h3" fontSize={size} fontWeight={700}>
         {name}
       </Typography>
 
       {isVerified && (
-        <Box>
+        <Box maxHeight={`calc(${size} + 4px)`}>
           <CustomIcon
             pathFactor={VERIFIED_ICON_PATH}
             color="var(--twitter-blue-color)"
-            dim="1.35rem"
+            dim={size}
             viewBox="0 0 24 19"
           />
         </Box>

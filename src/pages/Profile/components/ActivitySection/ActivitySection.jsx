@@ -1,6 +1,7 @@
 import { TabContext, TabPanel } from "@mui/lab";
 import { Box } from "@mui/material";
 import { useState } from "react";
+import PostsPanel from "./PostsPanel";
 import { TABS } from "./constants";
 import { StyledTab, StyledTabList } from "./styled";
 
@@ -25,13 +26,17 @@ const ActivitySection = () => {
         </StyledTabList>
       </Box>
 
-      <TabPanel value="posts">Posts...</TabPanel>
+      <TabPanel value="posts" sx={{ p: 0 }}>
+        <PostsPanel />
+      </TabPanel>
 
-      <TabPanel value="replies">Replies...</TabPanel>
+      <TabPanel value="replies" sx={{ p: 0 }}>
+        <PostsPanel />
+      </TabPanel>
 
       <TabPanel value="media">Media...</TabPanel>
 
-      <TabPanel value="likes">Item Three...</TabPanel>
+      <TabPanel value="likes">Likes...</TabPanel>
     </TabContext>
   );
 };
