@@ -10,7 +10,7 @@ const LeftSideBar = () => {
   const isExpanded = !useMediaQuery(LEFT_BREAKPOINT);
 
   return (
-    <Drawer sx={{ width: "259px" }} open={isExpanded}>
+    <Drawer sx={{ width: "259px", height: "100vh" }} open={isExpanded}>
       <Header />
 
       <DrawerList />

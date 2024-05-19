@@ -15,6 +15,8 @@ const LayoutGridStyle = {
 const Layout = () => {
   const { isLeftSideBarExpanded } = useMediaQuery();
 
+  // const theme = useTheme();
+
   return (
     <Stack alignItems="center">
       <Grid container sx={LayoutGridStyle}>
@@ -40,13 +42,18 @@ const Layout = () => {
           maxWidth={{ md: "980.4px" }}
           columnGap={{ xs: 0, md: 2, lg: 4 }}
           height="100vh"
+          overflow="hidden"
         >
           <Grid
             item
             xs={12}
             md={7}
             maxWidth={{ sm: "600px" }}
-            sx={{ borderInline: "1px rgb(47, 51, 54) solid" }}
+            sx={{
+              borderInline: "1px rgb(47, 51, 54) solid",
+              height: "100%",
+              overflowY: "auto",
+            }}
           >
             <Outlet />
           </Grid>
@@ -57,6 +64,12 @@ const Layout = () => {
             md={4.6}
             display={{ xs: "none", md: "flex" }}
             maxWidth={{ sm: "348.4px" }}
+            sx={{
+              height: "100%",
+              overflowY: "auto",
+              overflowX: "hidden",
+              // ...theme.mixins.niceScroll(),
+            }}
           >
             <RightSideBar />
           </Grid>
