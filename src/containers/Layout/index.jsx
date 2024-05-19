@@ -4,6 +4,7 @@ import { Outlet } from "react-router-dom";
 import LeftSideBar from "../../components/LeftSideBar";
 import RightSideBar from "../../components/RightSideBar";
 import useMediaQuery from "../../hooks/useMediaQuery";
+import customMixins from "./mixins";
 
 const LayoutGridStyle = {
   height: "100vh",
@@ -14,8 +15,6 @@ const LayoutGridStyle = {
 
 const Layout = () => {
   const { isLeftSideBarExpanded } = useMediaQuery();
-
-  // const theme = useTheme();
 
   return (
     <Stack alignItems="center">
@@ -41,7 +40,7 @@ const Layout = () => {
           lg={isLeftSideBarExpanded ? 9.3913 : 11}
           maxWidth={{ md: "980.4px" }}
           columnGap={{ xs: 0, md: 2, lg: 4 }}
-          height="100vh"
+          height="calc(100vh)"
           overflow="hidden"
         >
           <Grid
@@ -53,6 +52,7 @@ const Layout = () => {
               borderInline: "1px rgb(47, 51, 54) solid",
               height: "100%",
               overflowY: "auto",
+              ...customMixins.niceScroll(7),
             }}
           >
             <Outlet />
@@ -64,11 +64,11 @@ const Layout = () => {
             md={4.6}
             display={{ xs: "none", md: "flex" }}
             maxWidth={{ sm: "348.4px" }}
+            mb={80}
             sx={{
               height: "100%",
               overflowY: "auto",
-              overflowX: "hidden",
-              // ...theme.mixins.niceScroll(),
+              ...customMixins.niceScroll(0),
             }}
           >
             <RightSideBar />
