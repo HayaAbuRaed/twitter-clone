@@ -1,4 +1,6 @@
 export const formatNumber = (num) => {
+  if (!num) return 0;
+
   const suffixes = ["", "K", "M", "B", "T"];
 
   const suffixIndex = Math.floor(
