@@ -4,7 +4,7 @@ import { getTrends } from "../API";
 import { TREND_QUERY_KEY } from "../constants";
 
 // id stands for woeid, 1 is for the global trends, 1968902 is for JO, and so on...
-const useGetTrends = (id = 1) => {
+const useGetTrends = (id = 1940345) => {
   const {
     data: trends,
     isFetching,

@@ -10,8 +10,11 @@ const Header = ({ name, postsCount, isVerified }) => {
       flexDirection="row"
       alignItems="center"
       gap={2.5}
-      sx={{ backgroundColor: "rgba(0, 0, 0, 0.65)" }}
       minHeight={53}
+      position="sticky"
+      top={0}
+      zIndex={1000}
+      sx={{ backgroundColor: "rgba(0, 0, 0, 0.65)", backdropFilter: 'blur(0.63rem)'}}
     >
       {/* Back Button */}
       <IconButton

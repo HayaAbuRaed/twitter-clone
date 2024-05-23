@@ -26,7 +26,7 @@ const Profile = () => {
   const { name, statuses_count } = legacy;
 
   return (
-    <Box>
+    <Box position="relative">
       <Header
         name={name}
         postsCount={statuses_count}
